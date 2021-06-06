@@ -1,0 +1,117 @@
+{% extends "users/main_base.html" %}
+{% load static %}
+
+{% block mobileView %}
+<meta name="viewport" content="width=1200, user-scalable=yes">
+{% endblock %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'css/about/about.css' %}" type="text/css"> 
+{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-10">
+            <h4 style="font-weight: bold;">컴퓨터공학과 학생회 조직도</h4>
+        </div>
+        {% if request.user.level == '0' or request.user.level == '1' %}
+        <a class="organizationEditBtn" href="{% url 'about:organization_update' %}">* 편집하기</a>
+        {% endif %}
+    </div>
+</div>
+<hr style="width:69rem;">
+<br><br>
+<div class="row justify-content-md-center">
+    <div class="card organizationCard">
+        <div class="row justify-content-md-center">
+            <div class="card organizationCardTitle">
+                <h5 class="organizationTitle">학생회</h5>
+            </div>
+        </div>
+        <div class="card-body organizationBody">
+            {% for list in organization_list %}
+                {% if list.rank == '1' %}
+                    <span class="oragnizationRank">회장</span>
+                    <span class="oragnizationName">{{ list.name }}</span><br>
+                {% elif list.rank == '2' %}
+                    <span class="oragnizationRank">부회장</span>
+                    <span class="oragnizationName">{{ list.name }}</span><br>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<br><br><br>
+<div class="row justify-content-md-center">
+    <div class="card organizationChild">
+        <div class="row justify-content-md-center">
+            <div class="card organizationCardTitle">
+                <h5 class="organizationTitle">복지부</h5>
+            </div>
+        </div>
+        <div class="card-body organizationBody">
+            {% for list in organization_list %}
+                {% if list.part == '복지부' %}
+                    {% if list.rank == '3' %}
+                        <span class="oragnizationRank">부장</span>
+                        <span class="oragnizationName">{{ list.name }}</span><br>
+                    {% elif list.rank == '4' %}
+                        <span class="oragnizationRank">차장</span>
+                        <span class="oragnizationName">{{ list.name }}</span><br>
+                    {% elif list.rank == '5' %}
+                        <span class="oragnizationRank">부원</span>
+                        <span class="oragnizationName">{{ list.name }}</span><br>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="card organizationChild">
+        <div class="row justify-content-md-center">
+            <div class="card organizationCardTitle">
+                <h5 class="organizationTitle">총무부</h5>
+            </div>
+        </div>
+        <div class="card-body organizationBody">
+            {% for list in organization_list %}
+                {% if list.part == '총무부' %}
+                    {% if list.rank == '3' %}
+                        <span class="oragnizationRank">부장</span>
+                        <span class="oragnizationName">{{ list.name }}</span><br>
+                    {% elif list.rank == '4' %}
+                        <span class="oragnizationRank">차장</span>
+                        <span class="oragnizationName">{{ list.name }}</span><br>
+                    {% elif list.rank == '부원' %}
+                        <span class="oragnizationRank">부원</span>
+                        <span class="oragnizationName">{{ list.name }}</span><br>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="card organizationChild">
+        <div class="row justify-content-md-center">
+            <div class="card organizationCardTitle">
+                <h5 class="organizationTitle">기획부</h5>
+            </div>
+        </div>
+        <div class="card-body organizationBody">
+            {% for list in organization_list %}
+                {% if list.part == '기획부' %}
+                    {% if list.rank == '3' %}
+                        <span class="oragnizationRank">부장</span>
+                        <span class="oragnizationName">{{ list.name }}</span><br>
+                    {% elif list.rank == '4' %}
+                        <span class="oragnizationRank">차장</span>
+                        <span class="oragnizationName">{{ list.name }}</span><br>
+                    {% elif list.rank == '5' %}
+                        <span class="oragnizationRank">부원</span>
+                        <span class="oragnizationName">{{ list.name }}</span><br>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

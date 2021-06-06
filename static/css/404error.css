@@ -1,0 +1,74 @@
+html,
+
+
+body {
+    text-align: center;
+}
+
+/* button {
+    background: #1c03a7;
+    color: #fff;
+    border: none;
+    position: relative;
+    width: 195px;
+    height: 50px;
+    font-size: 1.4em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+button:hover {
+    background: #fff;
+    color:#1c03a7;
+}
+
+button:before,
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #1c03a7;
+    transition: 400ms ease all;
+}
+
+button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+} */
+
+
+button {
+    background: #356CCCF5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    width: 165px;
+    height: 40px;
+    font-size: 1.1em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+  
+button:hover {
+    background: #10145c;
+}
+
+button:focus {
+    outline : none;
+}
