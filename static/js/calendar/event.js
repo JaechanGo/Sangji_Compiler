@@ -254,11 +254,11 @@ function refreshAllEvents() {
 				var timeDiff = Math.abs(Date2.getTime() - Date1.getTime());
 				var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
 
-				var R = Math.floor(Math.random()*180)+50; 
+				var B = Math.floor(Math.random()*180)+50;
 				// var G = get_random_integer ( 0, 255 ); 
 				// var B = get_random_integer ( 0, 255 ); 
 
-				var random_color = "rgb(" + R+ ",0"+ ",0)"
+				var random_color = ;
 				for (var j=0; j <= diffDays; j++) {
 					eventDivId = parseInt(eventStartDate.substr(8, 2)) + j + month_names[month_number.indexOf(eventStartDate.substr(5, 2))];
 					if(j!=0) eventName="";
