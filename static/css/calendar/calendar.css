@@ -4,7 +4,7 @@ body {
 	font-weight: 400;
 }
 /* #left-bar {
-	background-color: #f05e5ef2;
+	background-color: #
 	width: 15%;
 	min-height: 100vh;
 	float: left;
@@ -18,7 +18,7 @@ body {
 
 #menu-bar {
 	font-size : 19px;
-	color: #f05e5ef2;
+	color: #356CCCf2;
 	padding-top: 5px;
 	height: 30px;
 	text-align: center;
@@ -207,7 +207,7 @@ textarea {
 
 .event-rectangles {
 	cursor: pointer;
-	background-color: #f05e5ef2;
+	background-color: #356CCCf2;
 	color:white;
 	/* border: 1px solid #356CCCF5; */
 	/* border-radius: 3px; */
@@ -238,8 +238,8 @@ textarea {
 }
 
 .currentday .event-rectangles {
-	background-color: f05e5ef2;
-	/* border: 3px solid #f05e5ef2; */
+	background-color: 356CCCf2;
+	/* border: 3px solid #356CCCf2; */
 	color: white;
 	margin-bottom: 3px;
 	margin-left: -5px;
@@ -318,7 +318,7 @@ textarea {
 }
 
 #authorize-button {
-	background-color: #f05e5ef2;
+	background-color: #356CCCf2;
 	color: white;
 	border: none;
 	padding: 5px 10px 5px 10px;
