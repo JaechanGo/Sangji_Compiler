@@ -47,7 +47,7 @@ body {
 	font-size: 3.7em;
 }
 
-.container {
+. {
 	height: calc(100vh - 38px);
 	width: calc(100% - 20px);
 	padding-left: 10px;
